@@ -1,7 +1,7 @@
 import React from "react";
 
-const page = () => {
+const Home = () => {
   return <div className="">magepersonalls-cam</div>;
 };
 
-export default page;
+export default Home;

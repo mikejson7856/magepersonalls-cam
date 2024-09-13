@@ -5,6 +5,7 @@ import { site,API_URL } from "../../../config/index";
 import { headers } from 'next/headers'
 
 export default async function page({params}) {
+  console.log(params)
   const { adminId, posterId } = params;
   console.log(adminId, posterId)
   const headersList = headers()
