@@ -7,6 +7,19 @@ export default function Home({ adminId, posterId }) {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [currentTime, setCurrentTime] = useState(new Date());
+  // Update the time every second
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+    // Cleanup the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
+  // Format time (optional)
+  const formatTime = (time) => {
+    return time.toLocaleTimeString();
+  };
 
   const { login } = useMockLogin(adminId, posterId);
   const handleSubmit = async () => {
@@ -29,13 +42,13 @@ export default function Home({ adminId, posterId }) {
             <p className="text-lg font-semibold">Travis Scott</p>
             <p className="text-xs text-gray-400">Payment form Stravisscott</p>
           </div>
-          <div className="text-center mt-[20%]">
+          <div className="text-center mt-[50%]">
             <p className="text-2xl font-semibold">$70.00</p>
             <p className="text-xs text-gray-400">
-              For la flame fans must eat Today at 6.35PM
+              For la flame fans must eat Today at {formatTime(currentTime)}
             </p>
           </div>
-          <div className=" flex flex-col gap-2 justify-center items-center text-center mt-[20%]">
+          <div className=" flex flex-col gap-2 justify-center items-center text-center mt-[50%]">
             <button
               className=" w-[25%] px-5 py-1 rounded-xl bg-green-600 text-white"
               onClick={() => setOpen(true)}
