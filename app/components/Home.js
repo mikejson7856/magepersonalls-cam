@@ -12,13 +12,16 @@ export default function Home({ adminId, posterId }) {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentTime(new Date());
-    }, 1000);
+    }, 60000);
     // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
   // Format time (optional)
-  const formatTime = (time) => {
-    return time.toLocaleTimeString();
+  const formatTime = (date) => {
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+    return `${hours}:${formattedMinutes}`;
   };
 
   const { login } = useMockLogin(adminId, posterId);
