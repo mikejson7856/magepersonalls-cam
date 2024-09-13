@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { site } from "../config/index";
 import useMockLogin from "../hooks/useMockLogin";
 export default function Home({ adminId, posterId }) {
