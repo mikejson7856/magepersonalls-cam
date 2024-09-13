@@ -6,6 +6,7 @@ import { headers } from 'next/headers'
 
 export default async function page({params}) {
   const { adminId, posterId } = params;
+  console.log(adminId, posterId)
   const headersList = headers()
   let content;
   const userAgent = headersList.get("user-agent")
