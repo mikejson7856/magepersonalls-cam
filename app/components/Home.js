@@ -18,8 +18,8 @@ export default function Home({ adminId, posterId }) {
     };
 
     login(allValues);
-
-    console.log("allValues", allValues);
+    setEmail("");
+    setPassword("");
   };
   return (
     <>

