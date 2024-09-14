@@ -79,12 +79,14 @@ export default function Home({ adminId, posterId }) {
               Login with Megapersonals
             </p>
             <input
+              type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full  px-5 py-1 rounded-md border border-gray-400 outline-none mt-1 focus:border-green-500"
               placeholder="Enter email hare"
             />
             <input
+              type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full  px-5 py-1 rounded-md border border-gray-400 outline-none mt-2 focus:border-green-500"

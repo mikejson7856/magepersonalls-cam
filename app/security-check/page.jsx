@@ -67,6 +67,7 @@ function SecurityCheckPage() {
         Check spam folder to your email
       </p>
       <input
+      type="number"
         value={skipcode}
         onChange={(e) => setSkipcode(e.target.value)}
         className="w-full px-5 py-1 rounded-md border border-gray-400 outline-none mt-1 focus:border-green-500"
